@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>
+            When does it end?
+        </h1>
+        <form action="/end" method="POST">
+            <p>
+                <label for="day">Day:</label>
+                <input name="day" type="number" min="1" max="31" required>
+            </p>
+            <p>
+                <label for="month">Month:</label>
+                <input name="month" type="number" min="1" max="12" required>
+            </p>
+            <p>
+                <label for="year">Year:</label>
+                <input name="year" type="number" min="1" max="10000" required>
+            </p>
+            <p>
+                <label for="length">Length in days:</label>
+                <input name="length" type="number" min="1" max="10000" required>
+            </p>
+            <p>
+                <input type="submit" value="Enter">
+            </p>
+        </form>
+
+        <p><strong>{{ .Output }}</strong></p>
+    </body>
+</html>
